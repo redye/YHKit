@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CarouselViewController.h"
+#import "WelcomeViewController.h"
 
 NSString * const kCell = @"Cell";
 
@@ -27,7 +28,8 @@ NSString * const kCell = @"Cell";
 }
 
 - (void)initData {
-    self.classes = @[[CarouselViewController class]];
+    self.classes = @[[CarouselViewController class],
+                     [WelcomeViewController class]];
 }
 
 - (void)setUI {
