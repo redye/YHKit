@@ -102,9 +102,7 @@
 - (void)setImageCount:(NSUInteger)imageCount {
     _imageCount = imageCount;
     [self setDefaultImage];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self performSelector:@selector(animation) withObject:nil afterDelay:kCarouselViewAnimationDelay];
-    });
+    [self performSelectorOnMainThread:@selector(animation) withObject:nil waitUntilDone:YES];
 }
 
 - (void)setIndicatorColor:(UIColor *)color {
