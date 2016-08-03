@@ -84,12 +84,12 @@
 }
 
 - (void)animation {
-    [UIView animateWithDuration:kCarouselViewAnimationDuration animations:^{
+    [UIView animateWithDuration:kCarouselViewAnimationDuration delay:kCarouselViewAnimationDelay options:UIViewAnimationOptionCurveLinear animations:^{
         CGPoint offset = self.scrollView.contentOffset;
         self.scrollView.contentOffset = CGPointMake(offset.x + kCarouselViewWidth, offset.y);
     } completion:^(BOOL finished) {
         [self updateUI];
-        [self performSelector:@selector(animation) withObject:nil afterDelay:kCarouselViewAnimationDelay];
+        [self performSelectorOnMainThread:@selector(animation) withObject:nil waitUntilDone:YES];
     }];
 }
 
@@ -102,7 +102,7 @@
 - (void)setImageCount:(NSUInteger)imageCount {
     _imageCount = imageCount;
     [self setDefaultImage];
-    [self performSelector:@selector(animation) withObject:nil afterDelay:kCarouselViewAnimationDelay];
+    [self performSelectorOnMainThread:@selector(animation) withObject:nil waitUntilDone:YES];
 }
 
 - (void)setIndicatorColor:(UIColor *)color {
