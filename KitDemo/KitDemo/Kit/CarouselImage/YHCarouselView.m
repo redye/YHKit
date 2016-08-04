@@ -10,8 +10,8 @@
 
 #define kCarouselViewPageControlHeight     20
 #define kCarouselViewWidth                 CGRectGetWidth(self.frame)
-#define kCarouselViewAnimationDelay        (self.animationDelay > 0 ? self.animationDelay : 3)
-#define kCarouselViewAnimationDuration     (self.animationDuration > 0 ? self.animationDuration : 0.5)
+#define kCarouselViewAnimationDelay        3
+#define kCarouselViewAnimationDuration     0.5
 
 @interface YHCarouselView ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;

@@ -28,8 +28,6 @@
 @interface YHCarouselView : UIView
 
 @property (nonatomic, weak) id<YHCarouselViewDelegate> delegate;
-@property (nonatomic, assign) NSTimeInterval animationDelay;
-@property (nonatomic, assign) NSTimeInterval animationDuration;
 @property (nonatomic, assign) NSUInteger imageCount; // 如果使用图片下载时，这个属性必须实现
 
 /**
