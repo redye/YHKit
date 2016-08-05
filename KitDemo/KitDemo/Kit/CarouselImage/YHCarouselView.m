@@ -103,7 +103,7 @@
     _imageCount = imageCount;
     [self setDefaultImage];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self performSelector:@selector(animation) withObject:nil afterDelay:kCarouselViewAnimationDelay];
+        [self performSelector:@selector(animation) withObject:nil];
     });
 }
 
