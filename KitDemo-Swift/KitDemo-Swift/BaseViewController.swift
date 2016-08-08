@@ -22,6 +22,7 @@ class BaseViewController: UIViewController {
     
     func setUI() {
         self.view.backgroundColor = UIColor.whiteColor()
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 
     override func didReceiveMemoryWarning() {

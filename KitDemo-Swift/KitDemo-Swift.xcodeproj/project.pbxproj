@@ -64,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		857CB6541D5867B500D981F1 /* KitDemo-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KitDemo-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		85C61A921D51D63500A24C96 /* KitDemo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KitDemo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C61A951D51D63500A24C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C61A971D51D63500A24C96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		85C61AE71D51D68800A24C96 /* ind_upgrade_750X1334_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ind_upgrade_750X1334_5.jpg; sourceTree = "<group>"; };
 		85C61AE81D51D68800A24C96 /* ind_upgrade_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ind_upgrade_start@2x.png"; sourceTree = "<group>"; };
 		85C61AE91D51D68800A24C96 /* ind_upgrade_start@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ind_upgrade_start@3x.png"; sourceTree = "<group>"; };
-		85C61B171D51D7D400A24C96 /* KitDemo-Swift-Bridging-Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KitDemo-Swift-Bridging-Header.pch"; sourceTree = "<group>"; };
 		85C61B181D51D9A200A24C96 /* CarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		85C61B1C1D51E28300A24C96 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 				85C61A9C1D51D63500A24C96 /* Assets.xcassets */,
 				85C61A9E1D51D63500A24C96 /* LaunchScreen.storyboard */,
 				85C61AA11D51D63500A24C96 /* Info.plist */,
-				85C61B171D51D7D400A24C96 /* KitDemo-Swift-Bridging-Header.pch */,
+				857CB6541D5867B500D981F1 /* KitDemo-Swift-Bridging-Header.h */,
 			);
 			path = "KitDemo-Swift";
 			sourceTree = "<group>";
@@ -535,6 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redye.KitDemo-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KitDemo-Swift/KitDemo-Swift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -546,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redye.KitDemo-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KitDemo-Swift/KitDemo-Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -568,6 +570,7 @@
 				85C61AA61D51D63500A24C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
