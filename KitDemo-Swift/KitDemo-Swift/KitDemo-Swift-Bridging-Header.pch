@@ -9,7 +9,6 @@
 #ifndef KitDemo_Swift_Bridging_Header_pch
 #define KitDemo_Swift_Bridging_Header_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIImageView+WebCache.h"
 
 #endif /* KitDemo_Swift_Bridging_Header_pch */
