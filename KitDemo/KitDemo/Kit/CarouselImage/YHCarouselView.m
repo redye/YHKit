@@ -83,13 +83,15 @@
     [self addGestureRecognizer:tap];
 }
 
-- (void)animation {
-    [UIView animateWithDuration:kCarouselViewAnimationDuration delay:kCarouselViewAnimationDelay options:UIViewAnimationOptionCurveLinear animations:^{
+- (void)animation {    
+    [UIView animateWithDuration:kCarouselViewAnimationDuration animations:^{
         CGPoint offset = self.scrollView.contentOffset;
         self.scrollView.contentOffset = CGPointMake(offset.x + kCarouselViewWidth, offset.y);
     } completion:^(BOOL finished) {
         [self updateUI];
-        [self performSelectorOnMainThread:@selector(animation) withObject:nil waitUntilDone:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self performSelector:@selector(animation) withObject:nil afterDelay:kCarouselViewAnimationDelay];
+        });
     }];
 }
 
@@ -103,7 +105,7 @@
     _imageCount = imageCount;
     [self setDefaultImage];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self performSelector:@selector(animation) withObject:nil];
+        [self performSelector:@selector(animation) withObject:nil afterDelay:kCarouselViewAnimationDelay];
     });
 }
 
