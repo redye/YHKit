@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */; };
+		853E5A1C1D6563AC00EF00C5 /* star_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A161D6563AC00EF00C5 /* star_normal.png */; };
+		853E5A1D1D6563AC00EF00C5 /* star_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A171D6563AC00EF00C5 /* star_normal@2x.png */; };
+		853E5A1E1D6563AC00EF00C5 /* star_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A181D6563AC00EF00C5 /* star_normal@3x.png */; };
+		853E5A1F1D6563AC00EF00C5 /* star_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A191D6563AC00EF00C5 /* star_selected.png */; };
+		853E5A201D6563AC00EF00C5 /* star_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A1A1D6563AC00EF00C5 /* star_selected@2x.png */; };
+		853E5A211D6563AC00EF00C5 /* star_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A1B1D6563AC00EF00C5 /* star_selected@3x.png */; };
+		853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A221D65645B00EF00C5 /* RatingViewController.swift */; };
+		853E5A251D65645B00EF00C5 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A231D65645B00EF00C5 /* RatingViewController.xib */; };
 		85C61A961D51D63500A24C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61A951D51D63500A24C96 /* AppDelegate.swift */; };
 		85C61A981D51D63500A24C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61A971D51D63500A24C96 /* ViewController.swift */; };
 		85C61A9B1D51D63500A24C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C61A991D51D63500A24C96 /* Main.storyboard */; };
@@ -64,6 +73,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRatingControl.swift; sourceTree = "<group>"; };
+		853E5A161D6563AC00EF00C5 /* star_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_normal.png; sourceTree = "<group>"; };
+		853E5A171D6563AC00EF00C5 /* star_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_normal@2x.png"; sourceTree = "<group>"; };
+		853E5A181D6563AC00EF00C5 /* star_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_normal@3x.png"; sourceTree = "<group>"; };
+		853E5A191D6563AC00EF00C5 /* star_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_selected.png; sourceTree = "<group>"; };
+		853E5A1A1D6563AC00EF00C5 /* star_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@2x.png"; sourceTree = "<group>"; };
+		853E5A1B1D6563AC00EF00C5 /* star_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@3x.png"; sourceTree = "<group>"; };
+		853E5A221D65645B00EF00C5 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		853E5A231D65645B00EF00C5 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		857CB6541D5867B500D981F1 /* KitDemo-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KitDemo-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		85C61A921D51D63500A24C96 /* KitDemo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KitDemo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C61A951D51D63500A24C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +169,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		853E5A0E1D65610E00EF00C5 /* RatingControl */ = {
+			isa = PBXGroup;
+			children = (
+				853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */,
+			);
+			path = RatingControl;
+			sourceTree = "<group>";
+		};
+		853E5A151D65638100EF00C5 /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				853E5A161D6563AC00EF00C5 /* star_normal.png */,
+				853E5A171D6563AC00EF00C5 /* star_normal@2x.png */,
+				853E5A181D6563AC00EF00C5 /* star_normal@3x.png */,
+				853E5A191D6563AC00EF00C5 /* star_selected.png */,
+				853E5A1A1D6563AC00EF00C5 /* star_selected@2x.png */,
+				853E5A1B1D6563AC00EF00C5 /* star_selected@3x.png */,
+			);
+			path = Star;
+			sourceTree = "<group>";
+		};
 		85C61A891D51D63500A24C96 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +217,8 @@
 				85C61B1C1D51E28300A24C96 /* BaseViewController.swift */,
 				85C61B181D51D9A200A24C96 /* CarouselViewController.swift */,
 				85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */,
+				853E5A221D65645B00EF00C5 /* RatingViewController.swift */,
+				853E5A231D65645B00EF00C5 /* RatingViewController.xib */,
 				85C61A991D51D63500A24C96 /* Main.storyboard */,
 				85C61A9C1D51D63500A24C96 /* Assets.xcassets */,
 				85C61A9E1D51D63500A24C96 /* LaunchScreen.storyboard */,
@@ -190,6 +231,7 @@
 		85C61AA71D51D65000A24C96 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				853E5A0E1D65610E00EF00C5 /* RatingControl */,
 				85C61B1E1D51E39300A24C96 /* CarouselView */,
 			);
 			path = Kit;
@@ -246,6 +288,7 @@
 		85C61ACB1D51D68800A24C96 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				853E5A151D65638100EF00C5 /* Star */,
 				85C61ACC1D51D68800A24C96 /* IMG_0010.JPG */,
 				85C61ACD1D51D68800A24C96 /* IMG_0021.JPG */,
 				85C61ACE1D51D68800A24C96 /* IMG_0023.JPG */,
@@ -360,24 +403,31 @@
 				85C61B051D51D68800A24C96 /* ind_upgrade_1080X1920_5.jpg in Resources */,
 				85C61B161D51D68800A24C96 /* ind_upgrade_start@3x.png in Resources */,
 				85C61B011D51D68800A24C96 /* ind_upgrade_1080X1920_1.jpg in Resources */,
+				853E5A1C1D6563AC00EF00C5 /* star_normal.png in Resources */,
 				85C61AFC1D51D68800A24C96 /* IMG_0023.JPG in Resources */,
 				85C61B091D51D68800A24C96 /* ind_upgrade_640X1136_4.jpg in Resources */,
+				853E5A201D6563AC00EF00C5 /* star_selected@2x.png in Resources */,
 				85C61B071D51D68800A24C96 /* ind_upgrade_640X1136_2.jpg in Resources */,
 				85C61B131D51D68800A24C96 /* ind_upgrade_750X1334_4.jpg in Resources */,
 				85C61AFA1D51D68800A24C96 /* IMG_0010.JPG in Resources */,
+				853E5A1E1D6563AC00EF00C5 /* star_normal@3x.png in Resources */,
 				85C61B061D51D68800A24C96 /* ind_upgrade_640X1136_1.jpg in Resources */,
 				85C61AA01D51D63500A24C96 /* LaunchScreen.storyboard in Resources */,
 				85C61B0F1D51D68800A24C96 /* ind_upgrade_640X960_5.jpg in Resources */,
+				853E5A1D1D6563AC00EF00C5 /* star_normal@2x.png in Resources */,
+				853E5A251D65645B00EF00C5 /* RatingViewController.xib in Resources */,
 				85C61B0A1D51D68800A24C96 /* ind_upgrade_640X1136_5.jpg in Resources */,
 				85C61B0E1D51D68800A24C96 /* ind_upgrade_640X960_4.jpg in Resources */,
 				85C61B101D51D68800A24C96 /* ind_upgrade_750X1334_1.jpg in Resources */,
 				85C61A9D1D51D63500A24C96 /* Assets.xcassets in Resources */,
 				85C61B151D51D68800A24C96 /* ind_upgrade_start@2x.png in Resources */,
+				853E5A1F1D6563AC00EF00C5 /* star_selected.png in Resources */,
 				85C61B111D51D68800A24C96 /* ind_upgrade_750X1334_2.jpg in Resources */,
 				85C61B0C1D51D68800A24C96 /* ind_upgrade_640X960_2.jpg in Resources */,
 				85C61B081D51D68800A24C96 /* ind_upgrade_640X1136_3.jpg in Resources */,
 				85C61AFB1D51D68800A24C96 /* IMG_0021.JPG in Resources */,
 				85C61AFD1D51D68800A24C96 /* IMG_0149.JPG in Resources */,
+				853E5A211D6563AC00EF00C5 /* star_selected@3x.png in Resources */,
 				85C61B021D51D68800A24C96 /* ind_upgrade_1080X1920_2.jpg in Resources */,
 				85C61AFE1D51D68800A24C96 /* IMG_0151.JPG in Resources */,
 				85C61A9B1D51D63500A24C96 /* Main.storyboard in Resources */,
@@ -402,7 +452,9 @@
 				85C61AF31D51D68800A24C96 /* UIButton+WebCache.m in Sources */,
 				85C61B201D51E3C500A24C96 /* YHCarouselView.swift in Sources */,
 				85C61B1D1D51E28300A24C96 /* BaseViewController.swift in Sources */,
+				853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */,
 				85C61AF81D51D68800A24C96 /* UIImageView+WebCache.m in Sources */,
+				853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */,
 				85C61AEE1D51D68800A24C96 /* SDWebImageDecoder.m in Sources */,
 				85C61B191D51D9A200A24C96 /* CarouselViewController.swift in Sources */,
 				85C61A981D51D63500A24C96 /* ViewController.swift in Sources */,
