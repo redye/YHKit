@@ -21,7 +21,6 @@
  *  @param imageView    当前展示图片的容器
  */
 - (void)carouselView:(YHCarouselView *)carouselView didShowAtIndex:(NSUInteger)index imageView:(UIImageView *)imageView;
-@property (nonatomic, assign) NSUInteger imageCount; // 如果使用图片下载时，这个属性必须实现
 
 @end
 
