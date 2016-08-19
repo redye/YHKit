@@ -29,6 +29,7 @@ class CarouselViewController: BaseViewController, YHCarouselViewDelegate {
                           "IMG_0166.JPG"
         ]
         carouselView.loadImageNames(imageNames)
+        carouselView.animated = true
         
         
 //        let scrollView = UIScrollView(frame: CGRectMake(0, 350, 375, 200))
@@ -50,6 +51,7 @@ class CarouselViewController: BaseViewController, YHCarouselViewDelegate {
                         "http://pic51.nipic.com/file/20141030/2531170_080422201000_2.jpg"
                     ]
         let carouselView2 = YHCarouselView.init(frame: CGRectMake(0, 325, CGRectGetWidth(self.view.frame), 200))
+        carouselView2.animated = true
         carouselView2.delegate = self
         carouselView2.imageCount = imageUrls.count
         self.view.addSubview(carouselView2)
