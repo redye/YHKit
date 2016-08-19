@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		850EA57F1D6AD56500842086 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850EA57D1D6AD56500842086 /* PageControlViewController.swift */; };
-		850EA5801D6AD56500842086 /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 850EA57E1D6AD56500842086 /* PageControlViewController.xib */; };
-		852CFF771D6AF54B0065C47F /* ScrollControllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D781D6716890044E5EB /* ScrollControllViewController.swift */; };
-		852CFF781D6AF5870065C47F /* YHScrollControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D761D6711080044E5EB /* YHScrollControl.swift */; };
 		853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */; };
 		853E5A1C1D6563AC00EF00C5 /* star_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A161D6563AC00EF00C5 /* star_normal.png */; };
 		853E5A1D1D6563AC00EF00C5 /* star_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A171D6563AC00EF00C5 /* star_normal@2x.png */; };
@@ -20,7 +16,8 @@
 		853E5A211D6563AC00EF00C5 /* star_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A1B1D6563AC00EF00C5 /* star_selected@3x.png */; };
 		853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A221D65645B00EF00C5 /* RatingViewController.swift */; };
 		853E5A251D65645B00EF00C5 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A231D65645B00EF00C5 /* RatingViewController.xib */; };
-		857C4D7C1D67183D0044E5EB /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D7B1D67183D0044E5EB /* YHPageControl.swift */; };
+		857C4D771D6711080044E5EB /* YHScrollControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D761D6711080044E5EB /* YHScrollControl.swift */; };
+		857C4D791D6716890044E5EB /* ScrollControllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D781D6716890044E5EB /* ScrollControllViewController.swift */; };
 		85C61A961D51D63500A24C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61A951D51D63500A24C96 /* AppDelegate.swift */; };
 		85C61A981D51D63500A24C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61A971D51D63500A24C96 /* ViewController.swift */; };
 		85C61A9B1D51D63500A24C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85C61A991D51D63500A24C96 /* Main.storyboard */; };
@@ -78,8 +75,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		850EA57D1D6AD56500842086 /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
-		850EA57E1D6AD56500842086 /* PageControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControlViewController.xib; sourceTree = "<group>"; };
 		853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRatingControl.swift; sourceTree = "<group>"; };
 		853E5A161D6563AC00EF00C5 /* star_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_normal.png; sourceTree = "<group>"; };
 		853E5A171D6563AC00EF00C5 /* star_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_normal@2x.png"; sourceTree = "<group>"; };
@@ -91,7 +86,6 @@
 		853E5A231D65645B00EF00C5 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		857C4D761D6711080044E5EB /* YHScrollControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHScrollControl.swift; sourceTree = "<group>"; };
 		857C4D781D6716890044E5EB /* ScrollControllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollControllViewController.swift; sourceTree = "<group>"; };
-		857C4D7B1D67183D0044E5EB /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 		857CB6541D5867B500D981F1 /* KitDemo-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KitDemo-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		85C61A921D51D63500A24C96 /* KitDemo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KitDemo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C61A951D51D63500A24C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,14 +202,6 @@
 			path = ScrollControl;
 			sourceTree = "<group>";
 		};
-		857C4D7A1D6717FB0044E5EB /* Control */ = {
-			isa = PBXGroup;
-			children = (
-				857C4D7B1D67183D0044E5EB /* YHPageControl.swift */,
-			);
-			path = Control;
-			sourceTree = "<group>";
-		};
 		85C61A891D51D63500A24C96 = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +227,6 @@
 				85C61A951D51D63500A24C96 /* AppDelegate.swift */,
 				85C61A971D51D63500A24C96 /* ViewController.swift */,
 				85C61B1C1D51E28300A24C96 /* BaseViewController.swift */,
-				850EA57D1D6AD56500842086 /* PageControlViewController.swift */,
-				850EA57E1D6AD56500842086 /* PageControlViewController.xib */,
 				857C4D781D6716890044E5EB /* ScrollControllViewController.swift */,
 				85C61B181D51D9A200A24C96 /* CarouselViewController.swift */,
 				85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */,
@@ -260,7 +244,6 @@
 		85C61AA71D51D65000A24C96 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
-				857C4D7A1D6717FB0044E5EB /* Control */,
 				857C4D751D6711080044E5EB /* ScrollControl */,
 				853E5A0E1D65610E00EF00C5 /* RatingControl */,
 				85C61B1E1D51E39300A24C96 /* CarouselView */,
@@ -438,7 +421,6 @@
 				85C61AFC1D51D68800A24C96 /* IMG_0023.JPG in Resources */,
 				85C61B091D51D68800A24C96 /* ind_upgrade_640X1136_4.jpg in Resources */,
 				853E5A201D6563AC00EF00C5 /* star_selected@2x.png in Resources */,
-				850EA5801D6AD56500842086 /* PageControlViewController.xib in Resources */,
 				85C61B071D51D68800A24C96 /* ind_upgrade_640X1136_2.jpg in Resources */,
 				85C61B131D51D68800A24C96 /* ind_upgrade_750X1334_4.jpg in Resources */,
 				85C61AFA1D51D68800A24C96 /* IMG_0010.JPG in Resources */,
@@ -477,21 +459,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				852CFF781D6AF5870065C47F /* YHScrollControl.swift in Sources */,
-				852CFF771D6AF54B0065C47F /* ScrollControllViewController.swift in Sources */,
 				85C61AF41D51D68800A24C96 /* UIImage+GIF.m in Sources */,
 				85C61B1B1D51D9AA00A24C96 /* WelcomeViewController.swift in Sources */,
-				857C4D7C1D67183D0044E5EB /* YHPageControl.swift in Sources */,
-				850EA57F1D6AD56500842086 /* PageControlViewController.swift in Sources */,
 				85C61AEF1D51D68800A24C96 /* SDWebImageDownloader.m in Sources */,
 				85C61AF71D51D68800A24C96 /* UIImageView+HighlightedWebCache.m in Sources */,
 				85C61AF31D51D68800A24C96 /* UIButton+WebCache.m in Sources */,
 				85C61B201D51E3C500A24C96 /* YHCarouselView.swift in Sources */,
 				85C61B1D1D51E28300A24C96 /* BaseViewController.swift in Sources */,
 				853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */,
+				857C4D771D6711080044E5EB /* YHScrollControl.swift in Sources */,
 				85C61AF81D51D68800A24C96 /* UIImageView+WebCache.m in Sources */,
 				853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */,
 				85C61AEE1D51D68800A24C96 /* SDWebImageDecoder.m in Sources */,
+				857C4D791D6716890044E5EB /* ScrollControllViewController.swift in Sources */,
 				85C61B191D51D9A200A24C96 /* CarouselViewController.swift in Sources */,
 				85C61A981D51D63500A24C96 /* ViewController.swift in Sources */,
 				85C61AED1D51D68800A24C96 /* SDWebImageCompat.m in Sources */,

@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                    RatingViewController.classForCoder(),
                    ScrollControllViewController.classForCoder(),
                    PageControlViewController.classForCoder()]
+
     }
     
     func setUI() {

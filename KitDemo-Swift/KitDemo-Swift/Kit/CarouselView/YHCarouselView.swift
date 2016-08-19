@@ -167,12 +167,9 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
     }
     
     private func requestImage(leftIndex leftIndex:Int, rightIndex: Int) {
-        let sel: Void? = self.delegate?.carouselView!(self, index: self.currentIndex, imageView: self.centerImageView)
-        if sel != nil {
-            self.delegate?.carouselView!(self, index: self.currentIndex, imageView: self.centerImageView)
-            self.delegate?.carouselView!(self, index: leftIndex, imageView: self.leftImageView)
-            self.delegate?.carouselView!(self, index: rightIndex, imageView: self.rightImageView)
-        }
+        self.delegate?.carouselView?(self, index: self.currentIndex, imageView: self.centerImageView)
+        self.delegate?.carouselView?(self, index: leftIndex, imageView: self.leftImageView)
+        self.delegate?.carouselView?(self, index: rightIndex, imageView: self.rightImageView)
     }
     
     private func updateUI() {
