@@ -114,10 +114,8 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
     }
     
     @objc private func tap() {
-        let sel: ()? = self.delegate?.carouselView?(self, selectedAtIndex: self.currentIndex)
-        if  sel != nil {
-            self.delegate!.carouselView!(self, selectedAtIndex: self.currentIndex)
-        }
+        print("点击")
+        self.delegate?.carouselView?(self, selectedAtIndex: self.currentIndex)
     }
     
     @objc private func animation() {

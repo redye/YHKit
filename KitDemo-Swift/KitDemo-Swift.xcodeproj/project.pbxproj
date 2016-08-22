@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852CFF7E1D6AF99D0065C47F /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CFF7D1D6AF99D0065C47F /* YHPageControl.swift */; };
+		852CFF811D6AF9A90065C47F /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */; };
+		852CFF821D6AF9A90065C47F /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852CFF801D6AF9A90065C47F /* PageControlViewController.xib */; };
 		853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */; };
 		853E5A1C1D6563AC00EF00C5 /* star_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A161D6563AC00EF00C5 /* star_normal.png */; };
 		853E5A1D1D6563AC00EF00C5 /* star_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A171D6563AC00EF00C5 /* star_normal@2x.png */; };
@@ -75,6 +78,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852CFF7D1D6AF99D0065C47F /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
+		852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		852CFF801D6AF9A90065C47F /* PageControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControlViewController.xib; sourceTree = "<group>"; };
 		853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRatingControl.swift; sourceTree = "<group>"; };
 		853E5A161D6563AC00EF00C5 /* star_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_normal.png; sourceTree = "<group>"; };
 		853E5A171D6563AC00EF00C5 /* star_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_normal@2x.png"; sourceTree = "<group>"; };
@@ -173,6 +179,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852CFF7C1D6AF99D0065C47F /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				852CFF7D1D6AF99D0065C47F /* YHPageControl.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		853E5A0E1D65610E00EF00C5 /* RatingControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +241,8 @@
 				85C61A951D51D63500A24C96 /* AppDelegate.swift */,
 				85C61A971D51D63500A24C96 /* ViewController.swift */,
 				85C61B1C1D51E28300A24C96 /* BaseViewController.swift */,
+				852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */,
+				852CFF801D6AF9A90065C47F /* PageControlViewController.xib */,
 				857C4D781D6716890044E5EB /* ScrollControllViewController.swift */,
 				85C61B181D51D9A200A24C96 /* CarouselViewController.swift */,
 				85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */,
@@ -244,6 +260,7 @@
 		85C61AA71D51D65000A24C96 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				852CFF7C1D6AF99D0065C47F /* Control */,
 				857C4D751D6711080044E5EB /* ScrollControl */,
 				853E5A0E1D65610E00EF00C5 /* RatingControl */,
 				85C61B1E1D51E39300A24C96 /* CarouselView */,
@@ -421,6 +438,7 @@
 				85C61AFC1D51D68800A24C96 /* IMG_0023.JPG in Resources */,
 				85C61B091D51D68800A24C96 /* ind_upgrade_640X1136_4.jpg in Resources */,
 				853E5A201D6563AC00EF00C5 /* star_selected@2x.png in Resources */,
+				852CFF821D6AF9A90065C47F /* PageControlViewController.xib in Resources */,
 				85C61B071D51D68800A24C96 /* ind_upgrade_640X1136_2.jpg in Resources */,
 				85C61B131D51D68800A24C96 /* ind_upgrade_750X1334_4.jpg in Resources */,
 				85C61AFA1D51D68800A24C96 /* IMG_0010.JPG in Resources */,
@@ -462,6 +480,7 @@
 				85C61AF41D51D68800A24C96 /* UIImage+GIF.m in Sources */,
 				85C61B1B1D51D9AA00A24C96 /* WelcomeViewController.swift in Sources */,
 				85C61AEF1D51D68800A24C96 /* SDWebImageDownloader.m in Sources */,
+				852CFF811D6AF9A90065C47F /* PageControlViewController.swift in Sources */,
 				85C61AF71D51D68800A24C96 /* UIImageView+HighlightedWebCache.m in Sources */,
 				85C61AF31D51D68800A24C96 /* UIButton+WebCache.m in Sources */,
 				85C61B201D51E3C500A24C96 /* YHCarouselView.swift in Sources */,
@@ -484,6 +503,7 @@
 				85C61AF21D51D68800A24C96 /* SDWebImagePrefetcher.m in Sources */,
 				85C61AEA1D51D68800A24C96 /* MKAnnotationView+WebCache.m in Sources */,
 				85C61AF91D51D68800A24C96 /* UIView+WebCacheOperation.m in Sources */,
+				852CFF7E1D6AF99D0065C47F /* YHPageControl.swift in Sources */,
 				85C61AEC1D51D68800A24C96 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
