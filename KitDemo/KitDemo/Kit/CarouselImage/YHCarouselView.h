@@ -27,8 +27,7 @@
 @interface YHCarouselView : UIView
 
 @property (nonatomic, weak) id<YHCarouselViewDelegate> delegate;
-@property (nonatomic, assign) NSUInteger imageCount; // 如果使用图片下载时，这个属性必须实现
-@property (nonatomic, assign) BOOL animated; 
+@property (nonatomic, assign) NSUInteger imageCount; // 如果使用图片下载时，这个属性必须实现 
 
 /**
  *  设置页面指示的默认颜色

@@ -33,15 +33,8 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
     public var imageCount: Int  = 0 {
         didSet {
             self.setDefaultImage()
-        }
-    }
-    
-    public var animated: Bool = false {
-        didSet {
-            if self.animated {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.performSelector(#selector(self.animation), withObject: nil, afterDelay: kCarouselViewAnimationeDelay)
-                }
+            dispatch_async(dispatch_get_main_queue()) {
+                self.performSelector(#selector(self.animation), withObject: nil, afterDelay: kCarouselViewAnimationeDelay)
             }
         }
     }

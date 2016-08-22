@@ -49,7 +49,6 @@
     [self.view addSubview:label];
     YHCarouselView *carouselView = [[YHCarouselView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(label.frame), self.view.bounds.size.width, 200)];
     [carouselView loadImageNames:self.imageNames];
-    carouselView.animated = YES;
     [self.view addSubview:carouselView];
     
     UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(carouselView.frame) + 30, CGRectGetWidth(self.view.frame), 30)];
@@ -59,7 +58,6 @@
     YHCarouselView *carouselView2 = [[YHCarouselView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(label2.frame), CGRectGetWidth(self.view.frame), 200)];
     carouselView2.delegate = self;
     carouselView2.imageCount = self.imageUrls.count;
-    carouselView2.animated = YES;
     [self.view addSubview:carouselView2];
 }
 
