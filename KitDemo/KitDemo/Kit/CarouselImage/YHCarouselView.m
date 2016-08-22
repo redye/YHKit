@@ -96,6 +96,7 @@
 }
 
 - (void)tap:(UITapGestureRecognizer *)gesture {
+    NSLog(@"点击");
     if (self.delegate && [self.delegate respondsToSelector:@selector(carouselView:didSelectedAtIndex:)]) {
         [self.delegate carouselView:self didSelectedAtIndex:self.currentIndex];
     }
