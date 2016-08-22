@@ -27,7 +27,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func initData() {
         classes = [CarouselViewController.classForCoder(),
                    WelcomeViewController.classForCoder(),
-                   RatingViewController.classForCoder()]
+                   RatingViewController.classForCoder(),
+                   ScrollControllViewController.classForCoder(),
+                   PageControlViewController.classForCoder()]
     }
     
     func setUI() {

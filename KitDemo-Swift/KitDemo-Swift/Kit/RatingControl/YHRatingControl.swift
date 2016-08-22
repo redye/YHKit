@@ -54,6 +54,14 @@ public class YHRatingControl: UIView {
         return width
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     // MARK: - Initialization
     func initRate() {
         if ratingButtons.count == 0 {
