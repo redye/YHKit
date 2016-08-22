@@ -23,14 +23,14 @@ public class YHPageControl: UIControl {
             if currentPage > numberOfPage - 1 {
                 currentPage = numberOfPage - 1
             }
+            if oldValue != currentPage {
+                self.sendActionsForControlEvents(UIControlEvents.ValueChanged)
+            }
             setNeedsLayout()
         }
     }
     @IBInspectable public var hidesForSinglePage: Bool = false {
         didSet {
-            if numberOfPage == 1 {
-                
-            }
             setNeedsLayout()
         }
     }
@@ -91,6 +91,11 @@ public class YHPageControl: UIControl {
         contentView.frame = CGRect(x: 0, y: 0, width: contentWidth, height: imageWidth)
         let center = CGPoint(x: self.frame.size.width / 2.0, y:self.frame.size.height / 2.0)
         contentView.center = center
+        if hidesForSinglePage {
+            self.contentView.hidden = numberOfPage == 1
+        } else {
+            self.contentView.hidden = false
+        }
         var imageFrame = CGRect(x: 0, y: 0, width: imageWidth, height: imageWidth)
         for (index, imageView) in imageViews.enumerate() {
             imageFrame.origin.x = CGFloat(index * (imageWidth + spacing))
@@ -135,6 +140,5 @@ public class YHPageControl: UIControl {
                 self.currentPage -= 1
             }
         }
-
     }
 }

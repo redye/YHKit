@@ -16,10 +16,12 @@ class PageControlViewController: BaseViewController {
         
         pageControl = YHPageControl()
         pageControl.frame = CGRectMake(20, 120, 300, 20)
-        pageControl.numberOfPage = 5
-        pageControl.currentPage = 3
+        pageControl.numberOfPage = 1
+        pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.greenColor()
+        pageControl.hidesForSinglePage = true
+        pageControl.addTarget(self, action: #selector(self.valueChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.view.addSubview(pageControl)
         
         let button = UIButton(type: .Custom)
@@ -32,5 +34,9 @@ class PageControlViewController: BaseViewController {
     
     func  buttonClick() {
         pageControl.numberOfPage = 10
+    }
+    
+    func valueChanged(pageControl: YHPageControl) {
+        print(pageControl.currentPage)
     }
 }
