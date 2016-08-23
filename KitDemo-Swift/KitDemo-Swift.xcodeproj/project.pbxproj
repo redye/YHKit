@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		852CFF7E1D6AF99D0065C47F /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CFF7D1D6AF99D0065C47F /* YHPageControl.swift */; };
 		852CFF811D6AF9A90065C47F /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */; };
 		852CFF821D6AF9A90065C47F /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852CFF801D6AF9A90065C47F /* PageControlViewController.xib */; };
 		853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */; };
@@ -75,10 +74,10 @@
 		85C61B1B1D51D9AA00A24C96 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */; };
 		85C61B1D1D51E28300A24C96 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B1C1D51E28300A24C96 /* BaseViewController.swift */; };
 		85C61B201D51E3C500A24C96 /* YHCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B1F1D51E3C500A24C96 /* YHCarouselView.swift */; };
+		85FC1A4D1D6BEA9100CC15D2 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC1A4C1D6BEA9100CC15D2 /* YHPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		852CFF7D1D6AF99D0065C47F /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 		852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		852CFF801D6AF9A90065C47F /* PageControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControlViewController.xib; sourceTree = "<group>"; };
 		853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRatingControl.swift; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 		85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		85C61B1C1D51E28300A24C96 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		85C61B1F1D51E3C500A24C96 /* YHCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHCarouselView.swift; sourceTree = "<group>"; };
+		85FC1A4C1D6BEA9100CC15D2 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,14 +179,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		852CFF7C1D6AF99D0065C47F /* Control */ = {
-			isa = PBXGroup;
-			children = (
-				852CFF7D1D6AF99D0065C47F /* YHPageControl.swift */,
-			);
-			path = Control;
-			sourceTree = "<group>";
-		};
 		853E5A0E1D65610E00EF00C5 /* RatingControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +252,7 @@
 		85C61AA71D51D65000A24C96 /* Kit */ = {
 			isa = PBXGroup;
 			children = (
-				852CFF7C1D6AF99D0065C47F /* Control */,
+				85FC1A4B1D6BEA9100CC15D2 /* PageControl */,
 				857C4D751D6711080044E5EB /* ScrollControl */,
 				853E5A0E1D65610E00EF00C5 /* RatingControl */,
 				85C61B1E1D51E39300A24C96 /* CarouselView */,
@@ -367,6 +359,14 @@
 				85C61B1F1D51E3C500A24C96 /* YHCarouselView.swift */,
 			);
 			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		85FC1A4B1D6BEA9100CC15D2 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				85FC1A4C1D6BEA9100CC15D2 /* YHPageControl.swift */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +490,7 @@
 				85C61AF81D51D68800A24C96 /* UIImageView+WebCache.m in Sources */,
 				853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */,
 				85C61AEE1D51D68800A24C96 /* SDWebImageDecoder.m in Sources */,
+				85FC1A4D1D6BEA9100CC15D2 /* YHPageControl.swift in Sources */,
 				857C4D791D6716890044E5EB /* ScrollControllViewController.swift in Sources */,
 				85C61B191D51D9A200A24C96 /* CarouselViewController.swift in Sources */,
 				85C61A981D51D63500A24C96 /* ViewController.swift in Sources */,
@@ -503,7 +504,6 @@
 				85C61AF21D51D68800A24C96 /* SDWebImagePrefetcher.m in Sources */,
 				85C61AEA1D51D68800A24C96 /* MKAnnotationView+WebCache.m in Sources */,
 				85C61AF91D51D68800A24C96 /* UIView+WebCacheOperation.m in Sources */,
-				852CFF7E1D6AF99D0065C47F /* YHPageControl.swift in Sources */,
 				85C61AEC1D51D68800A24C96 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +624,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redye.KitDemo-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KitDemo-Swift/KitDemo-Swift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -636,6 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redye.KitDemo-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KitDemo-Swift/KitDemo-Swift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

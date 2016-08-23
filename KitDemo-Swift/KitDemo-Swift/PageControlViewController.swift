@@ -30,6 +30,18 @@ class PageControlViewController: BaseViewController {
         self.view.addSubview(button)
         button.addTarget(self, action: #selector(self.buttonClick), forControlEvents: UIControlEvents.TouchUpInside)
         
+        let control = UIPageControl()
+        control.frame = CGRectMake(20, 250, 200, 20)
+        control.numberOfPages = 10
+        control.currentPage = 5
+        control.pageIndicatorTintColor = UIColor.redColor()
+        control.currentPageIndicatorTintColor = UIColor.greenColor()
+        control.addTarget(self, action: #selector(self.valuesChanged2(_:)), forControlEvents: .ValueChanged)
+        self.view.addSubview(control)
+    }
+    
+    func valuesChanged2(control: UIPageControl) {
+        print(control.currentPage)
     }
     
     func  buttonClick() {
