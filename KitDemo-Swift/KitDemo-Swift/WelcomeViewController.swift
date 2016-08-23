@@ -10,7 +10,15 @@ import UIKit
 
 class WelcomeViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func setUI() {
+        super.setUI()
+        self.navigationController?.navigationBarHidden = true
+        
+        let welcomeView = YHWelcomeView(frame: self.view.bounds, prefix: "ind_upgrade", count: 5)
+        welcomeView.showInView(self.view)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 }

@@ -26,8 +26,7 @@ class CarouselViewController: BaseViewController, YHCarouselViewDelegate {
                           "IMG_0023.JPG",
                           "IMG_0149.JPG",
                           "IMG_0151.JPG",
-                          "IMG_0166.JPG"
-        ]
+                          "IMG_0166.JPG"]
         carouselView.loadImageNames(imageNames)
         
         
