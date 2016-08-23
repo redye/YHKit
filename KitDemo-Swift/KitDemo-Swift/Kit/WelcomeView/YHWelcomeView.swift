@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias CloseWelcomeClosure = () -> Void
+public typealias CompleteClosure = () -> Void
 
 public class YHWelcomeView: UIView {
     lazy private var scrollView: UIScrollView = {
@@ -32,6 +32,8 @@ public class YHWelcomeView: UIView {
     
     public var prefix: NSString?
     public var count: Int = 0
+    
+    public var complete: CompleteClosure?
     
     public init(frame: CGRect, prefix: NSString, count: Int) {
         super.init(frame: frame)
@@ -121,6 +123,10 @@ extension YHWelcomeView {
             self.alpha = 0
         }) { (complete: Bool) in
             self.removeFromSuperview()
+            if let complete = self.complete {
+                complete()
+            }
+
         }
     }
     

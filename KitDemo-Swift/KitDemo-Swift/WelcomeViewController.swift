@@ -15,6 +15,9 @@ class WelcomeViewController: BaseViewController {
         self.navigationController?.navigationBarHidden = true
         
         let welcomeView = YHWelcomeView(frame: self.view.bounds, prefix: "ind_upgrade", count: 5)
+        welcomeView.complete = {
+            print("完成")
+        }
         welcomeView.showInView(self.view)
     }
     
