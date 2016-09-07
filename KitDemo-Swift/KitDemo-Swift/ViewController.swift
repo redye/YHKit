@@ -25,11 +25,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func initData() {
-        classes = [CarouselViewController.classForCoder(),
+        classes = [CarouselViewController.self,
                    WelcomeViewController.classForCoder(),
                    RatingViewController.classForCoder(),
                    ScrollControllViewController.classForCoder(),
-                   PageControlViewController.classForCoder()]
+                   PageControlViewController.classForCoder(),
+                   PasswordFieldViewController.classForCoder(),
+                   SelectionViewController.classForCoder()]
 
     }
     
