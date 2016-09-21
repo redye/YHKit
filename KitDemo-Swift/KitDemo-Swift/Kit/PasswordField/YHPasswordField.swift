@@ -10,18 +10,18 @@ import UIKit
 
 
 public enum YHPasswordFieldStyle {
-    case Normal
-    case RoundedRect
+    case normal
+    case roundedRect
 }
 
-public class YHPasswordField: UIControl {
+open class YHPasswordField: UIControl {
     var field: UITextField?
     
     
 }
 
 extension YHPasswordField {
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     
     }
 }

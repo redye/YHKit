@@ -19,7 +19,7 @@ class CarouselViewController: BaseViewController, YHCarouselViewDelegate {
     override func setUI() {
         super.setUI()
         
-        let carouselView = YHCarouselView.init(frame: CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 200))
+        let carouselView = YHCarouselView.init(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 200))
         self.view.addSubview(carouselView)
         let imageNames = ["IMG_0010.JPG",
                           "IMG_0021.JPG",
@@ -48,7 +48,7 @@ class CarouselViewController: BaseViewController, YHCarouselViewDelegate {
                         "http://image.tianjimedia.com/uploadImages/2012/010/XC4Y39BYZT9A.jpg",
                         "http://pic51.nipic.com/file/20141030/2531170_080422201000_2.jpg"
                     ]
-        let carouselView2 = YHCarouselView.init(frame: CGRectMake(0, 325, CGRectGetWidth(self.view.frame), 200))
+        let carouselView2 = YHCarouselView.init(frame: CGRect(x: 0, y: 325, width: self.view.frame.width, height: 200))
         carouselView2.delegate = self
         carouselView2.imageCount = imageUrls.count
         self.view.addSubview(carouselView2)
@@ -56,9 +56,9 @@ class CarouselViewController: BaseViewController, YHCarouselViewDelegate {
     }
     
     // MARK: - YHCarouselViewDelegate
-    func carouselView(carouselView: YHCarouselView, index: Int, imageView: UIImageView) {
-        let url = NSURL(string: imageUrls[index])
-        imageView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "pic_default"))
+    func carouselView(_ carouselView: YHCarouselView, index: Int, imageView: UIImageView) {
+        let url = URL(string: imageUrls[index])
+        imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "pic_default"))
     }
 
 }

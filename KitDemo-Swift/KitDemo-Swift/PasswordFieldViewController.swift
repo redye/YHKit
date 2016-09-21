@@ -18,12 +18,12 @@ class PasswordFieldViewController: BaseViewController {
     override func setUI() {
         super.setUI()
         let passwordField = YHPasswordField(frame: CGRect(x: 20, y: 100, width: 100, height: 30))
-        passwordField.backgroundColor = UIColor.orangeColor()
+        passwordField.backgroundColor = UIColor.orange
         self.view.addSubview(passwordField)
         
         
         let textField = UITextField(frame: CGRect(x: 20, y: 150, width: 100, height: 30))
-        textField.borderStyle = .RoundedRect
+        textField.borderStyle = .roundedRect
         self.view.addSubview(textField)
     }
 

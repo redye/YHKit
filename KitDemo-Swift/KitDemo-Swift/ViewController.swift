@@ -12,10 +12,14 @@ let kCell: String = "Cell"
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    ///这里是属性
     var classes:[AnyClass] = [AnyClass]()
     var tableView: UITableView!
     
     
+    /**
+     @brief 这里是方法
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,28 +42,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func setUI() {
         self.title = "Home"
         
-        tableView = UITableView(frame: self.view.bounds, style: .Plain)
-        tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCell)
+        tableView = UITableView(frame: self.view.bounds, style: .plain)
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: kCell)
         tableView.dataSource = self
         tableView.delegate = self
         self.view.addSubview(tableView)
     }
     
     // MARK: - UITableViewDatasource, UITableViewDelegate
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.classes.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kCell, forIndexPath: indexPath)
-        cell.selectionStyle = .None
-        let text = String(self.classes[indexPath.row])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: kCell, for: indexPath)
+        cell.selectionStyle = .none
+        let text = String(describing: self.classes[(indexPath as NSIndexPath).row])
         cell.textLabel?.text = text
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cls: AnyClass! = self.classes[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cls: AnyClass! = self.classes[(indexPath as NSIndexPath).row]
         let viewController = (cls as! UIViewController.Type).init()
         self.navigationController?.pushViewController(viewController, animated: true)
     }

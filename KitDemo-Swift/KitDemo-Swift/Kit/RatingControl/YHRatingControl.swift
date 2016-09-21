@@ -10,9 +10,9 @@ import UIKit
 
 @IBDesignable
 
-public class YHRatingControl: UIView {
+open class YHRatingControl: UIView {
     // MARK: - Properties
-    @IBInspectable public var rating: Int = 0 {
+    @IBInspectable open var rating: Int = 0 {
         didSet {
             if rating < 0 {
                 rating = 0
@@ -24,31 +24,31 @@ public class YHRatingControl: UIView {
         }
     }
     
-    @IBInspectable public var maxRating: Int = 5 {
+    @IBInspectable open var maxRating: Int = 5 {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var filledStarImage: UIImage? {
+    @IBInspectable open var filledStarImage: UIImage? {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var emptyStarImage: UIImage? {
+    @IBInspectable open var emptyStarImage: UIImage? {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var spacing: Int = 5 {
+    @IBInspectable open var spacing: Int = 5 {
         didSet {
             setNeedsLayout()
         }
     }
-    private var ratingButtons = [UIButton]()
-    private var buttonSize: Int {
-        return Int(CGRectGetHeight(self.frame))
+    fileprivate var ratingButtons = [UIButton]()
+    fileprivate var buttonSize: Int {
+        return Int(self.frame.height)
     }
-    private var width: Int {
+    fileprivate var width: Int {
         let width = (buttonSize + spacing) * maxRating
         self.frame.size.width = CGFloat(width)
         return width
@@ -67,10 +67,10 @@ public class YHRatingControl: UIView {
         if ratingButtons.count == 0 {
             for _ in 0..<maxRating {
                 let button = UIButton()
-                button.setImage(emptyStarImage, forState: .Normal)
-                button.setImage(filledStarImage, forState: .Selected)
-                button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
-                button.userInteractionEnabled = false
+                button.setImage(emptyStarImage, for: UIControlState())
+                button.setImage(filledStarImage, for: .selected)
+                button.setImage(filledStarImage, for: [.highlighted, .selected])
+                button.isUserInteractionEnabled = false
                 
                 button.adjustsImageWhenHighlighted = false
                 ratingButtons += [button]
@@ -79,41 +79,41 @@ public class YHRatingControl: UIView {
         }
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         self.initRate()
         
         var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
         
-        for (index, button) in ratingButtons.enumerate() {
+        for (index, button) in ratingButtons.enumerated() {
             buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
         updateButtonSelectionStates()
     }
     
-    override public func intrinsicContentSize() -> CGSize {
+    override open var intrinsicContentSize : CGSize {
         return CGSize(width: width, height: buttonSize)
     }
     
     func updateButtonSelectionStates() {
-        for (index, button) in ratingButtons.enumerate() {
-            button.selected = index < rating
+        for (index, button) in ratingButtons.enumerated() {
+            button.isSelected = index < rating
         }
     }
     
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         handleStarTouches(touches, withEvent: event)
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         handleStarTouches(touches, withEvent: event)
     }
     
-    func handleStarTouches(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    func handleStarTouches(_ touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
-            let position = touch.locationInView(self)
+            let position = touch.location(in: self)
             
             if position.x > -50 && position.x < CGFloat(width + 50) {
                 ratingButtonSelected(position)
@@ -121,9 +121,9 @@ public class YHRatingControl: UIView {
         }
     }
     
-    func ratingButtonSelected(position: CGPoint) {
-        for (index, button) in ratingButtons.enumerate() {
-            if position.x > CGRectGetMinX(button.frame) {
+    func ratingButtonSelected(_ position: CGPoint) {
+        for (index, button) in ratingButtons.enumerated() {
+            if position.x > button.frame.minX {
                 self.rating = index + 1
             } else if position.x < 0 {
                 self.rating = 0

@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		856911BC1D914F180012682A /* appledoc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 856911BD1D914F190012682A /* Build configuration list for PBXAggregateTarget "appledoc" */;
+			buildPhases = (
+				856911C11D914FBD0012682A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = appledoc;
+			productName = appledoc;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		852CFF811D6AF9A90065C47F /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */; };
 		852CFF821D6AF9A90065C47F /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852CFF801D6AF9A90065C47F /* PageControlViewController.xib */; };
@@ -438,11 +452,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = redye;
 				TargetAttributes = {
+					856911BC1D914F180012682A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 58A2U6L78Y;
+						ProvisioningStyle = Automatic;
+					};
 					85C61A911D51D63500A24C96 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -460,6 +480,7 @@
 			projectRoot = "";
 			targets = (
 				85C61A911D51D63500A24C96 /* KitDemo-Swift */,
+				856911BC1D914F180012682A /* appledoc */,
 			);
 		};
 /* End PBXProject section */
@@ -514,6 +535,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		856911C11D914FBD0012682A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"REDYE\";\ncompanyID=\"com.redye\";\ncompanyURL=\"http://redye.com\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"~/help\";\n# End constants\n\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85C61A8E1D51D63500A24C96 /* Sources */ = {
@@ -578,6 +615,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		856911BE1D914F190012682A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 58A2U6L78Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		856911BF1D914F190012682A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 58A2U6L78Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		85C61AA21D51D63500A24C96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,8 +645,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -638,8 +693,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -658,6 +715,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -672,6 +730,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redye.KitDemo-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KitDemo-Swift/KitDemo-Swift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -685,6 +744,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.redye.KitDemo-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/KitDemo-Swift/KitDemo-Swift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -692,6 +752,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		856911BD1D914F190012682A /* Build configuration list for PBXAggregateTarget "appledoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				856911BE1D914F190012682A /* Debug */,
+				856911BF1D914F190012682A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		85C61A8D1D51D63500A24C96 /* Build configuration list for PBXProject "KitDemo-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

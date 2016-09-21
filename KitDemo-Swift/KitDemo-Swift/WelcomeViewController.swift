@@ -12,7 +12,7 @@ class WelcomeViewController: BaseViewController {
 
     override func setUI() {
         super.setUI()
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
         
         let welcomeView = YHWelcomeView(frame: self.view.bounds, prefix: "ind_upgrade", count: 5)
         welcomeView.complete = {
@@ -21,7 +21,7 @@ class WelcomeViewController: BaseViewController {
         welcomeView.showInView(self.view)
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }

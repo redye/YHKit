@@ -9,13 +9,13 @@
 import UIKit
 
 @IBDesignable
-public class YHPageControl: UIControl {
-    @IBInspectable public var numberOfPage: Int = 0 {
+open class YHPageControl: UIControl {
+    @IBInspectable open var numberOfPage: Int = 0 {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var currentPage: Int = 0 {
+    @IBInspectable open var currentPage: Int = 0 {
         didSet {
             if currentPage < 0 {
                 currentPage = 0
@@ -24,53 +24,53 @@ public class YHPageControl: UIControl {
                 currentPage = numberOfPage - 1
             }
             if oldValue != currentPage {
-                self.sendActionsForControlEvents(UIControlEvents.ValueChanged)
+                self.sendActions(for: UIControlEvents.valueChanged)
             }
             setNeedsLayout()
         }
     }
-    @IBInspectable public var hidesForSinglePage: Bool = false {
+    @IBInspectable open var hidesForSinglePage: Bool = false {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var pageIndicatorTintColor: UIColor = UIColor.clearColor() {
+    @IBInspectable open var pageIndicatorTintColor: UIColor = UIColor.clear {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var currentPageIndicatorTintColor: UIColor = UIColor.clearColor() {
+    @IBInspectable open var currentPageIndicatorTintColor: UIColor = UIColor.clear {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var pageIndicatorImage: UIImage? {
+    @IBInspectable open var pageIndicatorImage: UIImage? {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var currentIndicatorImage: UIImage? {
+    @IBInspectable open var currentIndicatorImage: UIImage? {
         didSet {
             setNeedsLayout()
         }
     }
-    @IBInspectable public var spacing: Int = 9 {
+    @IBInspectable open var spacing: Int = 9 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable public var imageWidth: Int = 7
+    @IBInspectable open var imageWidth: Int = 7
     
-    private var contentWidth: Int {
+    fileprivate var contentWidth: Int {
         return (imageWidth + spacing) * numberOfPage - spacing
     }
-    private var contentView: UIView = UIView()
+    fileprivate var contentView: UIView = UIView()
     
-    private var imageViews = [UIImageView]()
+    fileprivate var imageViews = [UIImageView]()
  
-    private func setUI() {
-        if !contentView.isDescendantOfView(self) {
+    fileprivate func setUI() {
+        if !contentView.isDescendant(of: self) {
             self.addSubview(contentView)
         }
         
@@ -78,7 +78,7 @@ public class YHPageControl: UIControl {
         if count > 0 {
             for _ in 0..<count {
                 let imageView = UIImageView()
-                imageView.contentMode = .ScaleAspectFill
+                imageView.contentMode = .scaleAspectFill
                 imageView.layer.cornerRadius = CGFloat(imageWidth) / 2.0
                 self.imageViews.append(imageView)
                 self.contentView.addSubview(imageView)
@@ -86,31 +86,31 @@ public class YHPageControl: UIControl {
         }
     }
     
-    private func layoutUI() {
+    fileprivate func layoutUI() {
         contentView.frame = CGRect(x: 0, y: 0, width: contentWidth, height: imageWidth)
         let center = CGPoint(x: self.frame.size.width / 2.0, y:self.frame.size.height / 2.0)
         contentView.center = center
         if hidesForSinglePage {
-            self.contentView.hidden = numberOfPage == 1
+            self.contentView.isHidden = numberOfPage == 1
         } else {
-            self.contentView.hidden = false
+            self.contentView.isHidden = false
         }
         var imageFrame = CGRect(x: 0, y: 0, width: imageWidth, height: imageWidth)
-        for (index, imageView) in imageViews.enumerate() {
+        for (index, imageView) in imageViews.enumerated() {
             imageFrame.origin.x = CGFloat(index * (imageWidth + spacing))
             imageView.frame = imageFrame
-            imageView.layer.backgroundColor = pageIndicatorTintColor.CGColor
+            imageView.layer.backgroundColor = pageIndicatorTintColor.cgColor
             imageView.image = pageIndicatorImage
         }
     }
     
-    private func updateImageSelectionState() {
+    fileprivate func updateImageSelectionState() {
         let imageView = imageViews[currentPage]
-        imageView.layer.backgroundColor = currentPageIndicatorTintColor.CGColor
+        imageView.layer.backgroundColor = currentPageIndicatorTintColor.cgColor
         imageView.image = currentIndicatorImage
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         self.setUI()
@@ -120,21 +120,21 @@ public class YHPageControl: UIControl {
         self.updateImageSelectionState()
     }
     
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.handleTouches(touches, withEvent: event)
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.handleTouches(touches, withEvent: event)
     }
     
-    private func handleTouches(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    fileprivate func handleTouches(_ touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
-            let position = touch.locationInView(self)
+            let position = touch.location(in: self)
             
-            if position.x > (CGRectGetMaxX(contentView.frame) - CGFloat((imageWidth + spacing))) {
+            if position.x > (contentView.frame.maxX - CGFloat((imageWidth + spacing))) {
                 self.currentPage += 1
-            } else if position.x < (CGRectGetMinX(contentView.frame) + CGFloat((imageWidth + spacing))) {
+            } else if position.x < (contentView.frame.minX + CGFloat((imageWidth + spacing))) {
                 self.currentPage -= 1
             }
         }

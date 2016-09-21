@@ -15,26 +15,26 @@ let kCarouselViewAnimationDuration = 0.5
 
 @objc public protocol YHCarouselViewDelegate {
     
-    optional func carouselView(carouselView: YHCarouselView, selectedAtIndex: Int)
-    optional func carouselView(carouselView: YHCarouselView, index: Int, imageView: UIImageView)
+    @objc optional func carouselView(_ carouselView: YHCarouselView, selectedAtIndex: Int)
+    @objc optional func carouselView(_ carouselView: YHCarouselView, index: Int, imageView: UIImageView)
 }
 
-public class YHCarouselView: UIView, UIScrollViewDelegate {
+open class YHCarouselView: UIView, UIScrollViewDelegate {
     
-    public weak var delegate: YHCarouselViewDelegate?
+    open weak var delegate: YHCarouselViewDelegate?
     
-    private var scrollView: UIScrollView!
-    private var pageControll: UIPageControl!
-    private var leftImageView: UIImageView!
-    private var centerImageView: UIImageView!
-    private var rightImageView: UIImageView!
-    private var imageNames: [String]?
-    private var currentIndex: Int = 0
-    public var imageCount: Int  = 0 {
+    fileprivate var scrollView: UIScrollView!
+    fileprivate var pageControll: UIPageControl!
+    fileprivate var leftImageView: UIImageView!
+    fileprivate var centerImageView: UIImageView!
+    fileprivate var rightImageView: UIImageView!
+    fileprivate var imageNames: [String]?
+    fileprivate var currentIndex: Int = 0
+    open var imageCount: Int  = 0 {
         didSet {
             self.setDefaultImage()
-            dispatch_async(dispatch_get_main_queue()) {
-                self.performSelector(#selector(self.animation), withObject: nil, afterDelay: kCarouselViewAnimationeDelay)
+            DispatchQueue.main.async {
+                self.perform(#selector(self.animation), with: nil, afterDelay: kCarouselViewAnimationeDelay)
             }
         }
     }
@@ -48,54 +48,54 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
         self.setUI()
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         self.layoutUI()
     }
     
     // MARK: - private
-    private func layoutUI() {
-        let width = CGRectGetWidth(self.frame)
-        let height = CGRectGetHeight(self.frame)
-        scrollView.frame = CGRectMake(0, 0, width, height)
-        scrollView.contentSize = CGSizeMake(width * 3, height)
-        scrollView.contentOffset = CGPointMake(width, 0)
+    fileprivate func layoutUI() {
+        let width = self.frame.width
+        let height = self.frame.height
+        scrollView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        scrollView.contentSize = CGSize(width: width * 3, height: height)
+        scrollView.contentOffset = CGPoint(x: width, y: 0)
         
-        pageControll.frame = CGRectMake(0, height - kCarouselViewPageControllHeight, width, kCarouselViewPageControllHeight)
+        pageControll.frame = CGRect(x: 0, y: height - kCarouselViewPageControllHeight, width: width, height: kCarouselViewPageControllHeight)
         
-        leftImageView.frame = CGRectMake(width * 0, 0, width, height)
-        centerImageView.frame = CGRectMake(width * 1, 0, width, height)
-        rightImageView.frame = CGRectMake(width * 2, 0, width, height)
+        leftImageView.frame = CGRect(x: width * 0, y: 0, width: width, height: height)
+        centerImageView.frame = CGRect(x: width * 1, y: 0, width: width, height: height)
+        rightImageView.frame = CGRect(x: width * 2, y: 0, width: width, height: height)
     }
     
-    private func setUI() {
+    fileprivate func setUI() {
         scrollView = UIScrollView.init()
         scrollView.delegate = self
         scrollView.bounces = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.pagingEnabled = true
-        scrollView.contentOffset = CGPointZero
+        scrollView.isPagingEnabled = true
+        scrollView.contentOffset = CGPoint.zero
         self.addSubview(scrollView)
         
         pageControll = UIPageControl.init()
-        pageControll.pageIndicatorTintColor = UIColor.lightGrayColor()
-        pageControll.currentPageIndicatorTintColor = UIColor.whiteColor()
+        pageControll.pageIndicatorTintColor = UIColor.lightGray
+        pageControll.currentPageIndicatorTintColor = UIColor.white
         pageControll.currentPage = currentIndex
-        pageControll.enabled = false
+        pageControll.isEnabled = false
         self.addSubview(pageControll)
         
         leftImageView = UIImageView.init()
-        leftImageView.contentMode = .ScaleAspectFill
+        leftImageView.contentMode = .scaleAspectFill
         scrollView.addSubview(leftImageView)
         
         centerImageView = UIImageView.init()
-        centerImageView.contentMode = .ScaleAspectFill
+        centerImageView.contentMode = .scaleAspectFill
         scrollView.addSubview(centerImageView)
         
         rightImageView = UIImageView.init()
-        rightImageView.contentMode = .ScaleAspectFill
+        rightImageView.contentMode = .scaleAspectFill
         scrollView.addSubview(rightImageView)
         
         leftImageView.image = UIImage(named: "pic_default")
@@ -106,27 +106,27 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
         self.addGestureRecognizer(tap)
     }
     
-    @objc private func tap() {
+    @objc fileprivate func tap() {
         print("点击")
         self.delegate?.carouselView?(self, selectedAtIndex: self.currentIndex)
     }
     
-    @objc private func animation() {
-        UIView.animateWithDuration(kCarouselViewAnimationDuration, animations: {
+    @objc fileprivate func animation() {
+        UIView.animate(withDuration: kCarouselViewAnimationDuration, animations: {
             let offset = self.scrollView.contentOffset
-            self.scrollView.contentOffset = CGPointMake(offset.x + CGRectGetWidth(self.frame), offset.y)
-        }) { (finished: Bool) in
+            self.scrollView.contentOffset = CGPoint(x: offset.x + self.frame.width, y: offset.y)
+        }, completion: { (finished: Bool) in
             self.updateUI()
-            dispatch_async(dispatch_get_main_queue()) {
-                self.performSelector(#selector(self.animation), withObject: nil, afterDelay: kCarouselViewAnimationeDelay)
+            DispatchQueue.main.async {
+                self.perform(#selector(self.animation), with: nil, afterDelay: kCarouselViewAnimationeDelay)
             }
-        }
+        }) 
     }
     
-    private func setDefaultImage() {
+    fileprivate func setDefaultImage() {
         currentIndex = 0;
-        scrollView.scrollEnabled = imageCount > 0
-        pageControll.hidden = imageCount == 1
+        scrollView.isScrollEnabled = imageCount > 0
+        pageControll.isHidden = imageCount == 1
         pageControll.numberOfPages = imageCount
         let leftIndex = imageCount - 1;
         let rightIndex = (currentIndex + 1) % imageCount
@@ -139,11 +139,11 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
         rightImageView.image = UIImage(named: imageNames![rightIndex])
     }
     
-    private func reloadImage() {
+    fileprivate func reloadImage() {
         let offset = scrollView.contentOffset
-        if offset.x > CGRectGetWidth(self.frame) {  // 向右滑动
+        if offset.x > self.frame.width {  // 向右滑动
             currentIndex = (currentIndex + 1) % imageCount
-        } else if (offset.x < CGRectGetWidth(self.frame)){
+        } else if (offset.x < self.frame.width){
             currentIndex = (currentIndex + imageCount - 1) % imageCount
         }
         let leftIndex = (currentIndex + imageCount - 1) % imageCount
@@ -157,27 +157,27 @@ public class YHCarouselView: UIView, UIScrollViewDelegate {
         rightImageView.image = UIImage(named: imageNames![rightIndex])
     }
     
-    private func requestImage(leftIndex leftIndex:Int, rightIndex: Int) {
+    fileprivate func requestImage(leftIndex:Int, rightIndex: Int) {
         self.delegate?.carouselView?(self, index: self.currentIndex, imageView: self.centerImageView)
         self.delegate?.carouselView?(self, index: leftIndex, imageView: self.leftImageView)
         self.delegate?.carouselView?(self, index: rightIndex, imageView: self.rightImageView)
     }
     
-    private func updateUI() {
+    fileprivate func updateUI() {
         self.reloadImage()
         
         pageControll.currentPage = currentIndex
         
-        scrollView.setContentOffset(CGPointMake(CGRectGetWidth(self.frame), 0), animated: false)
+        scrollView.setContentOffset(CGPoint(x: self.frame.width, y: 0), animated: false)
     }
     
     // MARK: - UIScrollViewDelegate
-    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.updateUI()
     }
     
     // MARK: - public
-    public func loadImageNames(imageNames: [String]) {
+    open func loadImageNames(_ imageNames: [String]) {
         self.imageNames = imageNames
         self.imageCount = imageNames.count
     }
