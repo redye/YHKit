@@ -23,7 +23,6 @@
 /* Begin PBXBuildFile section */
 		852CFF811D6AF9A90065C47F /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */; };
 		852CFF821D6AF9A90065C47F /* PageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852CFF801D6AF9A90065C47F /* PageControlViewController.xib */; };
-		853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */; };
 		853E5A1C1D6563AC00EF00C5 /* star_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A161D6563AC00EF00C5 /* star_normal.png */; };
 		853E5A1D1D6563AC00EF00C5 /* star_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A171D6563AC00EF00C5 /* star_normal@2x.png */; };
 		853E5A1E1D6563AC00EF00C5 /* star_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A181D6563AC00EF00C5 /* star_normal@3x.png */; };
@@ -32,9 +31,14 @@
 		853E5A211D6563AC00EF00C5 /* star_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A1B1D6563AC00EF00C5 /* star_selected@3x.png */; };
 		853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E5A221D65645B00EF00C5 /* RatingViewController.swift */; };
 		853E5A251D65645B00EF00C5 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853E5A231D65645B00EF00C5 /* RatingViewController.xib */; };
-		856B70651D8014F0003FE690 /* YHSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B70641D8014F0003FE690 /* YHSelectionView.swift */; };
+		85660C4A1D9B683B00910F43 /* YHCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C3B1D9B683B00910F43 /* YHCarouselView.swift */; };
+		85660C4B1D9B683B00910F43 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C3D1D9B683B00910F43 /* YHPageControl.swift */; };
+		85660C4C1D9B683B00910F43 /* YHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C3F1D9B683B00910F43 /* YHPasswordField.swift */; };
+		85660C4D1D9B683B00910F43 /* YHRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C411D9B683B00910F43 /* YHRatingControl.swift */; };
+		85660C4F1D9B683B00910F43 /* YHScrollControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C451D9B683B00910F43 /* YHScrollControl.swift */; };
+		85660C501D9B683B00910F43 /* YHSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C471D9B683B00910F43 /* YHSelectionView.swift */; };
+		85660C511D9B683B00910F43 /* YHWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85660C491D9B683B00910F43 /* YHWelcomeView.swift */; };
 		856B70671D801504003FE690 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B70661D801504003FE690 /* SelectionViewController.swift */; };
-		857C4D771D6711080044E5EB /* YHScrollControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D761D6711080044E5EB /* YHScrollControl.swift */; };
 		857C4D791D6716890044E5EB /* ScrollControllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857C4D781D6716890044E5EB /* ScrollControllViewController.swift */; };
 		858C9FF61D6C55A2008B4AD7 /* ind_upgrade_1080X1920_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 858C9FE01D6C55A2008B4AD7 /* ind_upgrade_1080X1920_1.jpg */; };
 		858C9FF71D6C55A2008B4AD7 /* ind_upgrade_1080X1920_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 858C9FE11D6C55A2008B4AD7 /* ind_upgrade_1080X1920_2.jpg */; };
@@ -89,18 +93,13 @@
 		85C61B191D51D9A200A24C96 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B181D51D9A200A24C96 /* CarouselViewController.swift */; };
 		85C61B1B1D51D9AA00A24C96 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */; };
 		85C61B1D1D51E28300A24C96 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B1C1D51E28300A24C96 /* BaseViewController.swift */; };
-		85C61B201D51E3C500A24C96 /* YHCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C61B1F1D51E3C500A24C96 /* YHCarouselView.swift */; };
-		85C94AD71D6FE06300C62A0A /* YHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C94AD61D6FE06300C62A0A /* YHPasswordField.swift */; };
 		85C94ADA1D6FE29000C62A0A /* PasswordFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C94AD81D6FE29000C62A0A /* PasswordFieldViewController.swift */; };
 		85C94ADB1D6FE29000C62A0A /* PasswordFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85C94AD91D6FE29000C62A0A /* PasswordFieldViewController.xib */; };
-		85FC1A4D1D6BEA9100CC15D2 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC1A4C1D6BEA9100CC15D2 /* YHPageControl.swift */; };
-		85FC1A8D1D6BFD0400CC15D2 /* YHWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC1A8C1D6BFD0400CC15D2 /* YHWelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		852CFF7F1D6AF9A90065C47F /* PageControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		852CFF801D6AF9A90065C47F /* PageControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageControlViewController.xib; sourceTree = "<group>"; };
-		853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRatingControl.swift; sourceTree = "<group>"; };
 		853E5A161D6563AC00EF00C5 /* star_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_normal.png; sourceTree = "<group>"; };
 		853E5A171D6563AC00EF00C5 /* star_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_normal@2x.png"; sourceTree = "<group>"; };
 		853E5A181D6563AC00EF00C5 /* star_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_normal@3x.png"; sourceTree = "<group>"; };
@@ -109,9 +108,14 @@
 		853E5A1B1D6563AC00EF00C5 /* star_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@3x.png"; sourceTree = "<group>"; };
 		853E5A221D65645B00EF00C5 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		853E5A231D65645B00EF00C5 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
-		856B70641D8014F0003FE690 /* YHSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHSelectionView.swift; sourceTree = "<group>"; };
+		85660C3B1D9B683B00910F43 /* YHCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHCarouselView.swift; sourceTree = "<group>"; };
+		85660C3D1D9B683B00910F43 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
+		85660C3F1D9B683B00910F43 /* YHPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPasswordField.swift; sourceTree = "<group>"; };
+		85660C411D9B683B00910F43 /* YHRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRatingControl.swift; sourceTree = "<group>"; };
+		85660C451D9B683B00910F43 /* YHScrollControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHScrollControl.swift; sourceTree = "<group>"; };
+		85660C471D9B683B00910F43 /* YHSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHSelectionView.swift; sourceTree = "<group>"; };
+		85660C491D9B683B00910F43 /* YHWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHWelcomeView.swift; sourceTree = "<group>"; };
 		856B70661D801504003FE690 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
-		857C4D761D6711080044E5EB /* YHScrollControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHScrollControl.swift; sourceTree = "<group>"; };
 		857C4D781D6716890044E5EB /* ScrollControllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollControllViewController.swift; sourceTree = "<group>"; };
 		857CB6541D5867B500D981F1 /* KitDemo-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KitDemo-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		858C9FE01D6C55A2008B4AD7 /* ind_upgrade_1080X1920_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ind_upgrade_1080X1920_1.jpg; sourceTree = "<group>"; };
@@ -186,12 +190,8 @@
 		85C61B181D51D9A200A24C96 /* CarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		85C61B1A1D51D9AA00A24C96 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		85C61B1C1D51E28300A24C96 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		85C61B1F1D51E3C500A24C96 /* YHCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHCarouselView.swift; sourceTree = "<group>"; };
-		85C94AD61D6FE06300C62A0A /* YHPasswordField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPasswordField.swift; sourceTree = "<group>"; };
 		85C94AD81D6FE29000C62A0A /* PasswordFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordFieldViewController.swift; sourceTree = "<group>"; };
 		85C94AD91D6FE29000C62A0A /* PasswordFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordFieldViewController.xib; sourceTree = "<group>"; };
-		85FC1A4C1D6BEA9100CC15D2 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
-		85FC1A8C1D6BFD0400CC15D2 /* YHWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHWelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,14 +205,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		853E5A0E1D65610E00EF00C5 /* RatingControl */ = {
-			isa = PBXGroup;
-			children = (
-				853E5A0F1D65610E00EF00C5 /* YHRatingControl.swift */,
-			);
-			path = RatingControl;
-			sourceTree = "<group>";
-		};
 		853E5A151D65638100EF00C5 /* Star */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,20 +218,60 @@
 			path = Star;
 			sourceTree = "<group>";
 		};
-		856B70631D8014D1003FE690 /* SelectionView */ = {
+		85660C3A1D9B683B00910F43 /* CarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				856B70641D8014F0003FE690 /* YHSelectionView.swift */,
+				85660C3B1D9B683B00910F43 /* YHCarouselView.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		85660C3C1D9B683B00910F43 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				85660C3D1D9B683B00910F43 /* YHPageControl.swift */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		85660C3E1D9B683B00910F43 /* PasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				85660C3F1D9B683B00910F43 /* YHPasswordField.swift */,
+			);
+			path = PasswordField;
+			sourceTree = "<group>";
+		};
+		85660C401D9B683B00910F43 /* RatingControl */ = {
+			isa = PBXGroup;
+			children = (
+				85660C411D9B683B00910F43 /* YHRatingControl.swift */,
+			);
+			path = RatingControl;
+			sourceTree = "<group>";
+		};
+		85660C421D9B683B00910F43 /* ScrollControl */ = {
+			isa = PBXGroup;
+			children = (
+				85660C451D9B683B00910F43 /* YHScrollControl.swift */,
+			);
+			path = ScrollControl;
+			sourceTree = "<group>";
+		};
+		85660C461D9B683B00910F43 /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				85660C471D9B683B00910F43 /* YHSelectionView.swift */,
 			);
 			path = SelectionView;
 			sourceTree = "<group>";
 		};
-		857C4D751D6711080044E5EB /* ScrollControl */ = {
+		85660C481D9B683B00910F43 /* WelcomeView */ = {
 			isa = PBXGroup;
 			children = (
-				857C4D761D6711080044E5EB /* YHScrollControl.swift */,
+				85660C491D9B683B00910F43 /* YHWelcomeView.swift */,
 			);
-			path = ScrollControl;
+			path = WelcomeView;
 			sourceTree = "<group>";
 		};
 		85C61A891D51D63500A24C96 = {
@@ -263,7 +295,7 @@
 			children = (
 				85C61AA81D51D68800A24C96 /* Extensions */,
 				85C61ACB1D51D68800A24C96 /* Images */,
-				85C61AA71D51D65000A24C96 /* Kit */,
+				85C61AA71D51D65000A24C96 /* YHViews */,
 				85C61A951D51D63500A24C96 /* AppDelegate.swift */,
 				85C61A971D51D63500A24C96 /* ViewController.swift */,
 				85C61B1C1D51E28300A24C96 /* BaseViewController.swift */,
@@ -286,18 +318,18 @@
 			path = "KitDemo-Swift";
 			sourceTree = "<group>";
 		};
-		85C61AA71D51D65000A24C96 /* Kit */ = {
+		85C61AA71D51D65000A24C96 /* YHViews */ = {
 			isa = PBXGroup;
 			children = (
-				856B70631D8014D1003FE690 /* SelectionView */,
-				85C94AD51D6FE01A00C62A0A /* PasswordField */,
-				85FC1A8B1D6BFCDB00CC15D2 /* WelcomeView */,
-				85FC1A4B1D6BEA9100CC15D2 /* PageControl */,
-				857C4D751D6711080044E5EB /* ScrollControl */,
-				853E5A0E1D65610E00EF00C5 /* RatingControl */,
-				85C61B1E1D51E39300A24C96 /* CarouselView */,
+				85660C3A1D9B683B00910F43 /* CarouselView */,
+				85660C3C1D9B683B00910F43 /* PageControl */,
+				85660C3E1D9B683B00910F43 /* PasswordField */,
+				85660C401D9B683B00910F43 /* RatingControl */,
+				85660C421D9B683B00910F43 /* ScrollControl */,
+				85660C461D9B683B00910F43 /* SelectionView */,
+				85660C481D9B683B00910F43 /* WelcomeView */,
 			);
-			path = Kit;
+			path = YHViews;
 			sourceTree = "<group>";
 		};
 		85C61AA81D51D68800A24C96 /* Extensions */ = {
@@ -389,38 +421,6 @@
 				858C9FF31D6C55A2008B4AD7 /* ind_upgrade_750X1334_5.jpg */,
 				858C9FF41D6C55A2008B4AD7 /* ind_upgrade_start@2x.png */,
 				858C9FF51D6C55A2008B4AD7 /* ind_upgrade_start@3x.png */,
-			);
-			path = WelcomeView;
-			sourceTree = "<group>";
-		};
-		85C61B1E1D51E39300A24C96 /* CarouselView */ = {
-			isa = PBXGroup;
-			children = (
-				85C61B1F1D51E3C500A24C96 /* YHCarouselView.swift */,
-			);
-			path = CarouselView;
-			sourceTree = "<group>";
-		};
-		85C94AD51D6FE01A00C62A0A /* PasswordField */ = {
-			isa = PBXGroup;
-			children = (
-				85C94AD61D6FE06300C62A0A /* YHPasswordField.swift */,
-			);
-			path = PasswordField;
-			sourceTree = "<group>";
-		};
-		85FC1A4B1D6BEA9100CC15D2 /* PageControl */ = {
-			isa = PBXGroup;
-			children = (
-				85FC1A4C1D6BEA9100CC15D2 /* YHPageControl.swift */,
-			);
-			path = PageControl;
-			sourceTree = "<group>";
-		};
-		85FC1A8B1D6BFCDB00CC15D2 /* WelcomeView */ = {
-			isa = PBXGroup;
-			children = (
-				85FC1A8C1D6BFD0400CC15D2 /* YHWelcomeView.swift */,
 			);
 			path = WelcomeView;
 			sourceTree = "<group>";
@@ -558,37 +558,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C61AF41D51D68800A24C96 /* UIImage+GIF.m in Sources */,
+				85660C4F1D9B683B00910F43 /* YHScrollControl.swift in Sources */,
 				85C61B1B1D51D9AA00A24C96 /* WelcomeViewController.swift in Sources */,
 				85C61AEF1D51D68800A24C96 /* SDWebImageDownloader.m in Sources */,
 				852CFF811D6AF9A90065C47F /* PageControlViewController.swift in Sources */,
 				85C61AF71D51D68800A24C96 /* UIImageView+HighlightedWebCache.m in Sources */,
-				85FC1A8D1D6BFD0400CC15D2 /* YHWelcomeView.swift in Sources */,
+				85660C4C1D9B683B00910F43 /* YHPasswordField.swift in Sources */,
 				85C61AF31D51D68800A24C96 /* UIButton+WebCache.m in Sources */,
-				85C61B201D51E3C500A24C96 /* YHCarouselView.swift in Sources */,
 				85C61B1D1D51E28300A24C96 /* BaseViewController.swift in Sources */,
-				853E5A101D65610E00EF00C5 /* YHRatingControl.swift in Sources */,
-				857C4D771D6711080044E5EB /* YHScrollControl.swift in Sources */,
 				85C61AF81D51D68800A24C96 /* UIImageView+WebCache.m in Sources */,
-				85C94AD71D6FE06300C62A0A /* YHPasswordField.swift in Sources */,
 				853E5A241D65645B00EF00C5 /* RatingViewController.swift in Sources */,
 				85C61AEE1D51D68800A24C96 /* SDWebImageDecoder.m in Sources */,
-				85FC1A4D1D6BEA9100CC15D2 /* YHPageControl.swift in Sources */,
 				856B70671D801504003FE690 /* SelectionViewController.swift in Sources */,
 				857C4D791D6716890044E5EB /* ScrollControllViewController.swift in Sources */,
 				85C61B191D51D9A200A24C96 /* CarouselViewController.swift in Sources */,
-				856B70651D8014F0003FE690 /* YHSelectionView.swift in Sources */,
+				85660C4B1D9B683B00910F43 /* YHPageControl.swift in Sources */,
+				85660C511D9B683B00910F43 /* YHWelcomeView.swift in Sources */,
 				85C61A981D51D63500A24C96 /* ViewController.swift in Sources */,
 				85C61AED1D51D68800A24C96 /* SDWebImageCompat.m in Sources */,
+				85660C501D9B683B00910F43 /* YHSelectionView.swift in Sources */,
 				85C61A961D51D63500A24C96 /* AppDelegate.swift in Sources */,
 				85C61AF61D51D68800A24C96 /* UIImage+WebP.m in Sources */,
 				85C61AEB1D51D68800A24C96 /* NSData+ImageContentType.m in Sources */,
 				85C94ADA1D6FE29000C62A0A /* PasswordFieldViewController.swift in Sources */,
 				85C61AF01D51D68800A24C96 /* SDWebImageDownloaderOperation.m in Sources */,
 				85C61AF11D51D68800A24C96 /* SDWebImageManager.m in Sources */,
+				85660C4D1D9B683B00910F43 /* YHRatingControl.swift in Sources */,
 				85C61AF51D51D68800A24C96 /* UIImage+MultiFormat.m in Sources */,
 				85C61AF21D51D68800A24C96 /* SDWebImagePrefetcher.m in Sources */,
 				85C61AEA1D51D68800A24C96 /* MKAnnotationView+WebCache.m in Sources */,
 				85C61AF91D51D68800A24C96 /* UIView+WebCacheOperation.m in Sources */,
+				85660C4A1D9B683B00910F43 /* YHCarouselView.swift in Sources */,
 				85C61AEC1D51D68800A24C96 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
