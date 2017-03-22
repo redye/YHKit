@@ -8,14 +8,12 @@
 
 import UIKit
 
-let kCell: String = "Cell"
-
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     ///这里是属性
     var classes:[AnyClass] = [AnyClass]()
     var tableView: UITableView!
-    
+    let kCell: String = "Cell"    
     
     /**
      @brief 这里是方法

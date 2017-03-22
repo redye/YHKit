@@ -41,6 +41,7 @@
 		8528FDDB1D9E4F1400F9BCD7 /* MarqueeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8528FDDA1D9E4F1400F9BCD7 /* MarqueeViewController.m */; };
 		8528FDDD1D9E514F00F9BCD7 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8528FDDC1D9E514F00F9BCD7 /* star@2x.png */; };
 		8528FDF81D9E586400F9BCD7 /* YHMarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8528FDF71D9E586400F9BCD7 /* YHMarqueeView.m */; };
+		8556991E1D9E677D00629F22 /* YHTransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8556991D1D9E677D00629F22 /* YHTransitionView.m */; };
 		855FB3601D503ADD004E1460 /* IMG_0010.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 855FB3591D503ADD004E1460 /* IMG_0010.JPG */; };
 		855FB3611D503ADD004E1460 /* IMG_0021.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 855FB35A1D503ADD004E1460 /* IMG_0021.JPG */; };
 		855FB3621D503ADD004E1460 /* IMG_0023.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 855FB35B1D503ADD004E1460 /* IMG_0023.JPG */; };
@@ -112,6 +113,8 @@
 		8528FDDC1D9E514F00F9BCD7 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		8528FDF61D9E586400F9BCD7 /* YHMarqueeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHMarqueeView.h; sourceTree = "<group>"; };
 		8528FDF71D9E586400F9BCD7 /* YHMarqueeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHMarqueeView.m; sourceTree = "<group>"; };
+		8556991C1D9E677D00629F22 /* YHTransitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTransitionView.h; sourceTree = "<group>"; };
+		8556991D1D9E677D00629F22 /* YHTransitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTransitionView.m; sourceTree = "<group>"; };
 		855FB3591D503ADD004E1460 /* IMG_0010.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0010.JPG; sourceTree = "<group>"; };
 		855FB35A1D503ADD004E1460 /* IMG_0021.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0021.JPG; sourceTree = "<group>"; };
 		855FB35B1D503ADD004E1460 /* IMG_0023.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0023.JPG; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		8528FDC91D9E4EC200F9BCD7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8556991B1D9E670500629F22 /* YHTransitionImage */,
 				8528FDD51D9E4EFC00F9BCD7 /* MarqueeView */,
 				8528FDCA1D9E4EC200F9BCD7 /* CarouselImage */,
 				8528FDCD1D9E4EC200F9BCD7 /* WelcomeView */,
@@ -284,6 +288,16 @@
 				8528FDF71D9E586400F9BCD7 /* YHMarqueeView.m */,
 			);
 			path = MarqueeView;
+			sourceTree = "<group>";
+		};
+		8556991B1D9E670500629F22 /* YHTransitionImage */ = {
+			isa = PBXGroup;
+			children = (
+				8556991C1D9E677D00629F22 /* YHTransitionView.h */,
+				8556991D1D9E677D00629F22 /* YHTransitionView.m */,
+			);
+			name = YHTransitionImage;
+			path = TransitionImage;
 			sourceTree = "<group>";
 		};
 		855FB3561D503A7A004E1460 /* Extensions */ = {
@@ -461,6 +475,7 @@
 				855FB39B1D503B42004E1460 /* CarouselViewController.m in Sources */,
 				855FB3911D503AE8004E1460 /* SDWebImagePrefetcher.m in Sources */,
 				851AC1361D4B5E2200A64E3B /* AppDelegate.m in Sources */,
+				8556991E1D9E677D00629F22 /* YHTransitionView.m in Sources */,
 				851AC1331D4B5E2200A64E3B /* main.m in Sources */,
 				855FB3951D503AE8004E1460 /* UIImage+WebP.m in Sources */,
 				855FB3971D503AE8004E1460 /* UIImageView+WebCache.m in Sources */,
